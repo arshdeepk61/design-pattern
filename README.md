@@ -6,6 +6,7 @@ organized by category. Built for interview prep — each pattern is self-contain
 
 - **Java 21**, Maven, no external dependencies.
 - Every file has a header comment: **intent**, **when to use**, and **interview points**.
+- 📐 **[UML.md](UML.md)** — a Mermaid class diagram for every pattern (renders inline on GitHub).
 
 ## Run
 
