@@ -26,6 +26,8 @@ public class Main {
         run("Facade",    FacadeDemo::main);
         run("Proxy",     ProxyDemo::main);
         run("Composite", CompositeDemo::main);
+        run("Flyweight", FlyweightDemo::main);
+        run("Bridge",    BridgeDemo::main);
 
         section("BEHAVIORAL PATTERNS");
         run("Strategy",                StrategyDemo::main);
@@ -35,6 +37,9 @@ public class Main {
         run("State",                   StateDemo::main);
         run("Chain of Responsibility", ChainOfResponsibilityDemo::main);
         run("Iterator",                IteratorDemo::main);
+        run("Mediator",                MediatorDemo::main);
+        run("Memento",                 MementoDemo::main);
+        run("Visitor",                 VisitorDemo::main);
     }
 
     @FunctionalInterface

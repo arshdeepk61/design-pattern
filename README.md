@@ -39,6 +39,8 @@ Or run any single pattern directly from your IDE (each `*Demo` class has a `main
 | Facade | One simple interface over a complex subsystem | `structural/FacadeDemo.java` |
 | Proxy | A stand-in that controls access (lazy/virtual proxy) | `structural/ProxyDemo.java` |
 | Composite | Treat part-whole tree hierarchies uniformly | `structural/CompositeDemo.java` |
+| Flyweight | Share fine-grained objects to save memory (intrinsic vs extrinsic) | `structural/FlyweightDemo.java` |
+| Bridge | Split abstraction from implementation so both vary independently | `structural/BridgeDemo.java` |
 
 ### Behavioral — *how objects interact*
 | Pattern | One-liner | File |
@@ -50,6 +52,9 @@ Or run any single pattern directly from your IDE (each `*Demo` class has a `main
 | State | Behavior changes with internal state | `behavioral/StateDemo.java` |
 | Chain of Responsibility | Pass a request along a chain of handlers | `behavioral/ChainOfResponsibilityDemo.java` |
 | Iterator | Sequential access without exposing internals | `behavioral/IteratorDemo.java` |
+| Mediator | Centralize many-to-many communication into one hub | `behavioral/MediatorDemo.java` |
+| Memento | Capture & restore state for undo without breaking encapsulation | `behavioral/MementoDemo.java` |
+| Visitor | Add operations over a type hierarchy without changing it (double dispatch) | `behavioral/VisitorDemo.java` |
 
 ## Interview cheatsheet
 
@@ -63,6 +68,16 @@ Or run any single pattern directly from your IDE (each `*Demo` class has a `main
   avoiding a class explosion from static subclassing.
 - **Adapter vs Facade** — Adapter changes one interface to another expected one; Facade invents a
   new simpler interface over many classes.
+- **Bridge vs Adapter** — Bridge is designed up front to keep abstraction and implementation apart;
+  Adapter retrofits two existing, incompatible interfaces after the fact.
+- **Mediator vs Observer** — Mediator centralizes *who talks to whom* in one hub; Observer broadcasts
+  state changes one-to-many without the subject knowing its subscribers.
+- **Memento vs Command (undo)** — Memento restores a whole saved *state snapshot*; Command undo
+  replays *inverse operations*.
+- **Visitor trade-off** — easy to add new *operations* (new visitors), hard to add new *element
+  types* (must update every visitor) — the opposite of plain polymorphism.
+- **Flyweight** — split intrinsic (shared) from extrinsic (passed-in) state; see Java's
+  `Integer.valueOf` cache and the `String` pool.
 - **Where you've already seen them** — `java.io` streams (Decorator), `Iterator/Iterable` (Iterator),
   Spring AOP `@Transactional` (Proxy), Spring Security filter chain (Chain of Responsibility),
   `ApplicationEvent` (Observer), `StringBuilder`/Lombok `@Builder` (Builder).
