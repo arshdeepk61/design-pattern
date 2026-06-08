@@ -40,6 +40,7 @@ public class Main {
         run("Mediator",                MediatorDemo::main);
         run("Memento",                 MementoDemo::main);
         run("Visitor",                 VisitorDemo::main);
+        run("Interpreter",             InterpreterDemo::main);
     }
 
     @FunctionalInterface

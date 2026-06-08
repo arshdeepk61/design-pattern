@@ -55,6 +55,7 @@ Or run any single pattern directly from your IDE (each `*Demo` class has a `main
 | Mediator | Centralize many-to-many communication into one hub | `behavioral/MediatorDemo.java` |
 | Memento | Capture & restore state for undo without breaking encapsulation | `behavioral/MementoDemo.java` |
 | Visitor | Add operations over a type hierarchy without changing it (double dispatch) | `behavioral/VisitorDemo.java` |
+| Interpreter | Evaluate sentences of a simple grammar via an AST | `behavioral/InterpreterDemo.java` |
 
 ## Interview cheatsheet
 
@@ -78,6 +79,8 @@ Or run any single pattern directly from your IDE (each `*Demo` class has a `main
   types* (must update every visitor) — the opposite of plain polymorphism.
 - **Flyweight** — split intrinsic (shared) from extrinsic (passed-in) state; see Java's
   `Integer.valueOf` cache and the `String` pool.
+- **Interpreter** — each grammar rule is a class; the parse tree (AST) is a Composite of them.
+  Great for tiny, stable DSLs (rules, filters, expressions); use a real parser for anything larger.
 - **Where you've already seen them** — `java.io` streams (Decorator), `Iterator/Iterable` (Iterator),
   Spring AOP `@Transactional` (Proxy), Spring Security filter chain (Chain of Responsibility),
   `ApplicationEvent` (Observer), `StringBuilder`/Lombok `@Builder` (Builder).
